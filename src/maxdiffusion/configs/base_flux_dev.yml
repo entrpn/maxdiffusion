@@ -54,7 +54,7 @@ precision: "DEFAULT"
 # Set true to load weights from pytorch
 from_pt: True
 split_head_dim: True
-attention: 'dot_product' # Supported attention: dot_product, flash
+attention: 'flash' # Supported attention: dot_product, flash
 
 flash_block_sizes: {}
 # Use the following flash_block_sizes on v6e (Trillium) due to larger vmem.
@@ -111,7 +111,7 @@ diffusion_scheduler_config: {
 base_output_directory: ""
 
 # Hardware
-hardware: 'gpu' # Supported hardware types are 'tpu', 'gpu'
+hardware: 'tpu' # Supported hardware types are 'tpu', 'gpu'
 
 # Parallelism
 mesh_axes: ['data', 'fsdp', 'tensor']
